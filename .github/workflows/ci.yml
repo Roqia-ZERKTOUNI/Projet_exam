@@ -1,0 +1,29 @@
+name: Test Log Analyzer
+
+on:
+  push:
+    branches: [main, branch1]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Cloner le dépôt
+        uses: actions/checkout@v3
+
+      - name: 🔧 Installer Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: 📦 Installer les dépendances
+        run: |
+          python -m pip install --upgrade pip
+          pip install colorama
+
+      - name: ▶️ Exécuter le script
+        run: |
+          python log_analyzer.py
