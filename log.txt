@@ -1,0 +1,5 @@
+[2025-05-30 10:00:00] INFO: Démarrage du serveur.
+[2025-05-30 10:01:00] WARNING: Mémoire faible.
+[2025-05-30 10:02:00] ERROR: Connexion perdue.
+[2025-05-30 10:03:00] INFO: Reconnexion réussie.
+[2025-05-30 10:04:00] WARNING: Température élevée.
